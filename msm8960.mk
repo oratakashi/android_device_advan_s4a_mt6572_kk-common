@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2016 The Orata Team Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/motorola/msm8960_jbbl-common
+LOCAL_PATH := device/Advan/S4A/mt6572_kk-common
 
-# msm8960_jbbl-common specific overlay
+# mt6572_kk-common specific overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Permissions
@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    audio.primary.msm8960
+    audio.primary.mt6572
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -41,14 +41,14 @@ PRODUCT_PACKAGES += \
 
 # HAL
 PRODUCT_PACKAGES += \
-    camera.msm8960 \
-    copybit.msm8960 \
-    gps.msm8960 \
-    gralloc.msm8960 \
-    hwcomposer.msm8960 \
-    lights.MSM8960 \
-    memtrack.msm8960 \
-    power.msm8960
+    camera.mt6572 \
+    copybit.mt6572 \
+    gps.mt6572 \
+    gralloc.mt6572 \
+    hwcomposer.mt6572 \
+    lights.mt6572 \
+    memtrack.mt6572 \
+    power.mt6572
 
 # Filesystem
 PRODUCT_PACKAGES += \
@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
-# Motorola
+# Advan
 PRODUCT_PACKAGES += \
     batt_health \
     charge_only_mode \
@@ -157,7 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=MotorolaQualcommRIL \
+    ro.telephony.ril_class=mt6572 \
     ro.telephony.ril.config=setPrefNwTypeOnUnsolConnected
 
 # Misc
@@ -174,8 +174,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
-$(call inherit-product, device/motorola/qcom-common/qcom-common.mk)
-$(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
-$(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
-$(call inherit-product, device/motorola/qcom-common/keylayout/keylayout.mk)
-$(call inherit-product, vendor/motorola/msm8960_jbbl-common/msm8960_jbbl-common-vendor.mk)
+$(call inherit-product, device/advan/mtk-common/mt6572-common.mk)
+$(call inherit-product, device/advan/mtk-common/idc/idc.mk)
+$(call inherit-product, device/advan/mtk-common/keychars/keychars.mk)
+$(call inherit-product, device/advan/mtk-common/keylayout/keylayout.mk)
+$(call inherit-product, vendor/advan/mt6572_kk-common/mt6572_kk-common-vendor.mk)
