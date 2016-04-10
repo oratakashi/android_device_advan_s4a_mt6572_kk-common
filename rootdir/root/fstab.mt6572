@@ -6,7 +6,7 @@
 /dev/bootimg                                     /boot       emmc       defaults                                                    defaults
 /dev/recovery                                    /recovery   emmc       defaults                                                    defaults
 /dev/block/mmcblk0p4                             /system     ext4       ro                                                          wait
-/dev/block/mmcblk0p6                             /data       ext4       noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check,encryptable=/dev/block/platform/mtk-msdc.0/by-name/metadata
+/dev/block/mmcblk0p6                             /data       ext4       noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check
 /dev/block/mmcblk0p5                             /cache      ext4       noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check
 /dev/block/mmcblk0p2                             /protect_f  ext4       noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc    wait,check,notrim
 /dev/block/mmcblk0p3                             /protect_s  ext4       noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc    wait,check,notrim
