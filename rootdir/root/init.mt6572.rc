@@ -1,11 +1,12 @@
 # sprout storage specific rc file.
 
-import /init.sprout_common.rc
+import /init.mt6572_common.rc
 
 on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
+    symlink /sdcard /storage/sdcard1
 
     # By default, primary storage is physical
     setprop ro.vold.primary_physical 1
